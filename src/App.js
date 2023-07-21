@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Signing from "./pages/Signing";
 import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
+import CreateListing from "./pages/CreateListing";
 function App() {
   return (
     <>
@@ -23,8 +24,8 @@ function App() {
           <Route path="/sign-in" element={<Signing />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route />
-          <Route />
+          <Route path="/create-listing" element={<CreateListing />} />
+
         </Routes>
       </Router>
       <ToastContainer
