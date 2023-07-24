@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAuth, signOut, updateProfile } from "firebase/auth";
+import { getAuth, updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
@@ -78,11 +78,11 @@ export default function Profile() {
     }
     fetchUserListings();
   }, [auth.currentUser.uid]);
-  async function onDelete(listingID) {
+  async function onDelete(listingId) {
     if (window.confirm("Are you sure you want to delete")) {
-      await deleteDoc(doc(db, "listings", listingID));
+      await deleteDoc(doc(db, "listings", listingId));
       const updateListings = listings.filter(
-        (listing) => listing.id !== listingID
+        (listing) => listing.id !== listingId
       );
       setListings(updateListings);
       toast.success("Successfully deleted listing");
