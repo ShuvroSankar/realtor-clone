@@ -1,4 +1,11 @@
 import React from "react";
+
+import Slider from "../components/Slider";
+
 export default function Home() {
-  return <div>Home Alone</div>;
+  return (
+    <div>
+      <Slider />
+    </div>
+  );
 }

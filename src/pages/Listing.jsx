@@ -54,10 +54,10 @@ export default function Listing() {
 
   return (
     <main>
-      <Swiper
+     <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-        // spaceBetween={50}
+        //  spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{ type: "progressbar" }}
